@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+        <link rel="stylesheet" src="{{url_for('static', filename='style.css')}}">
+
+        <!-- <script ></script> -->
+        <title>CSE587</title>
+    </head>
+<body style="display:flex; flex-direction: column; align-items: center;justify-content: center;">
+
+<h1>Video Game Success Meter</h1>
+<p>Enter the summary of your video game and we will predict how the users will rate it out of 10!</p>
+<p>This score is only an approximation based on a model trained on 18,000 such summaries and their games.</p>
+<br>
+<hr>
+
+<br>
+
+<form style="display:flex; flex-direction: column; align-items: center;justify-content: center;" onsubmit="sendText(event); false">
+    <label for="summary"><b>Note:</b> Summaries must be atleast 50 characters!</label>
+    <textarea minlength="50" style="margin-bottom: 40px;" rows="10" cols="80" id="summary" name="summary"></textarea>
+    <p id="feedback"></p>
+    <button style="height: 40px; width: 200px; border-radius: 20px;" type="submit">Submit</button>
+</form>
+
+<div style="height: 10vh; display: flex; align-items: center; gap: 20px;" id="prediction">
+<!-- <h2 style="margin: 20px 0;">Our Prediction:</h2>
+<p id="rating"></p> -->
+</div>
+
+</body>
+</html>
